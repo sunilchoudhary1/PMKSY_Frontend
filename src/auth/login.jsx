@@ -23,15 +23,17 @@ export default function login()
         }
     };
     return(
+        <>
         <form onSubmit={handleLogin}>
-            <h2>Login Page</h2>
+            <h2>Login As User</h2>
             <label htmlFor="email">Email </label>
             <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required /> <br />
-            <label htmlFor="email">Email </label>
+            <label htmlFor="password">Password </label>
             <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required /> <br /><br />
-            <button type="submit">Login</button>
-            <a href="">Login as Operator</a> 
-            <a href="">Login as Manager</a>
+            <button type="submit">Login</button><br />
+          
         </form>
+        <Link to="/LoginOperator">Login as Operator</Link>
+        </>
     )
 }
